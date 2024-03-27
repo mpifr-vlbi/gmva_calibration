@@ -20,11 +20,9 @@ THIS SCRIPT IS BASED ON
 AND WAS UPDATED BY
 
 Author:     Lena Debbrecht at Max-Planck-Institute for Radioastronomy (MPIfR)
-Goal:       OOP: examine/modify Tsys and Gain data of GMVA antennas
-Version:    2
 Tested:     GMVA c232a
 Contact:    ldebbrecht@mpifr-bonn.mpg.de (or lenadebbrecht@web.de)
-Last update:  2024/Feb
+Last update:  2024/MAR
 ==============================================================================
 """
 
