@@ -1604,9 +1604,13 @@ class TypeB:
         if poly_match:
             poly_line = poly_match.group(0).strip().replace('\n', '')
 
+        # index_match = re.search(r'TSYS\s+[^/]+(?:\n\s*)?INDEX\s*=\s*[^/]+/', combined_data, re.IGNORECASE)
+
         index_match = re.search(r'TSYS\s+[^/]+INDEX\s*=\s*[^/]+/', combined_data, re.IGNORECASE)
         if index_match:
             index_line = index_match.group(0).strip().replace('\n', '')
+            if not re.search(r'\sINDEX', index_line):
+                index_line = re.sub(r'INDEX', ' INDEX', index_line)   
         else:
             print("INDEX line not available, please check this information")
 
@@ -3888,6 +3892,28 @@ if interactive_mode:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         # print('The antab generation is done. \nThere are more functions available for further analysis, such as: \n')
         # print('> smth: To smooth out the curve by removing OUTLIERS \n> somegains: To check a recent Gain Info of some special antennas \n> cpif: Copy and paste from a single IF with good Tsys to the IFs with bad Tsys')
         # while True:
@@ -3905,6 +3931,22 @@ if interactive_mode:
         #         break
         #     else:
         #         print("Invalid input. Please enter 'y' or 'n'.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         print('----------------------------\n')
         print('Next, you can compress all VLBA antab files to connect all sessions (e.g., c211a, c211b, ..c, ..d): \n')
         inputA = input("Do you want to continue? y/n: ")
