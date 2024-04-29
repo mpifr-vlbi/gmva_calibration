@@ -65,7 +65,9 @@ def dewpoint_vlba(infile):
                 if line_num == int(results_line):
                     f_out.write(f"/ \nWEATHER {station} /\n")
                 f_out.write(line)
-
+            # Remove all lines starting with *
+            if not line.startswith('*'):
+                f_out.write(line)
         os.replace('temp.txt', 'vlba_weather.txt')
 
     subprocess.run(['awk', '/^[^!]/ { print $0 }', 'vlba_weather.txt'], stdout=open('temp.txt', 'w'), check=True)
@@ -77,6 +79,7 @@ def dewpoint_vlba(infile):
     with open('vlba_weather.txt', 'a') as f:
         f.write(' /\n')
     os.remove(infile.replace(".vlba", "_tsys.txt"))
+
 
 
 nonTsysStar = ['EF', 'PV', 'MH']
@@ -94,10 +97,17 @@ for filename in os.listdir():
             if station_code in nonTsysStar:
                 dewpoint(filename, station_code)
 
+
 with open('SUM.WX', 'w') as f_sum:
     with open('vlba_weather.txt', 'r') as f_vlba:
-        f_sum.write(f_vlba.read())
+        lines = f_vlba.readlines()
+        for line in lines:
+            if not line.startswith('*'):
+                f_sum.write(line)
     for wx_file in os.listdir():
         if wx_file.startswith('WX.'):
             with open(wx_file, 'r') as f_wx:
-                f_sum.write(f_wx.read())
+                lines = f_wx.readlines()
+                for line in lines:
+                    if not line.startswith('*'):
+                        f_sum.write(line)
