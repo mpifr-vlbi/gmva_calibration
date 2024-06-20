@@ -2,25 +2,8 @@
 
 # -*- coding: utf-8 -*-
 """
-THIS SCRIPT IS BASED ON 
-
-            Author:     Daewon Kim at Max-Planck-Institute for Radioastronomy (MPIfR)
-            Goal:       To examine/modify Tsys and Gain data of the GMVA antennas
-            Version:    2
-            Tested:     GMVA 2021A session
-            Contact:    dwkim@mpifr-bonn.mpg.de (or dwkimastro@gmail.com)
-            Last update:  2022.09.04
-            *NOTE*
-            - It might be quite complex to use this program for those who are not familiar with VLBI antab files.
-            - Data formats of the GMVA antennas are very complicated and different by antennas. 
-            - If they have changed the formats, then this program will not work.
-            - There are some functions to be updated.
-            - The current version can be used for 3mm GMVA observations
-
-AND WAS UPDATED BY
-
 Author:     Lena Debbrecht at Max-Planck-Institute for Radioastronomy (MPIfR)
-Tested:     GMVA c232a
+Tested:     GMVA c232a, 3mm
 Contact:    ldebbrecht@mpifr-bonn.mpg.de (or lenadebbrecht@web.de)
 Last update:  2024/MAR
 ==============================================================================
