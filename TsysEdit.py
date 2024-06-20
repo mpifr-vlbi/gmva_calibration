@@ -2,9 +2,9 @@
 
 # -*- coding: utf-8 -*-
 """
-Author:     Lena Debbrecht at Max-Planck-Institute for Radioastronomy (MPIfR)
+Author:     Lena Debbrecht at Max-Planck-Institute for Radio Astronomy (MPIfR)
 Tested:     GMVA c232a, 3mm
-Contact:    ldebbrecht@mpifr-bonn.mpg.de (or lenadebbrecht@web.de)
+Contact:    ldebbrecht@mpifr-bonn.mpg.de
 Last update:  2024/MAR
 ==============================================================================
 """
