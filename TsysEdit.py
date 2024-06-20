@@ -5,7 +5,7 @@
 Author:     Lena Debbrecht at Max-Planck-Institute for Radio Astronomy (MPIfR)
 Tested:     GMVA c232a, 3mm
 Contact:    ldebbrecht@mpifr-bonn.mpg.de
-Last update:  2024/MAR
+Last update:  2024/JUN
 ==============================================================================
 """
 
